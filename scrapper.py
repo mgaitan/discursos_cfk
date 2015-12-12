@@ -20,7 +20,14 @@ for start in pages:
         d = PyQuery(url=url, headers=headers)
 
         # cleanups
-        d.remove('ul.actions, #fb-root, script, .clearfix, div[style="clear:both"]')
+        d.remove('ul.actions, #fb-root, script, div[style="clear:both"]')
+        for cf in d('.clearfix'):
+            if d(cf).text() == "":
+                d(cf).remove()
+
+        fecha = d('dd.published').text()
+        d('.article-info').before(u'<p>[{}]</p>'.format(fecha))
+        d.remove('.article-info')
 
         # no link in the title
         titulo = d('.item-page h2 a').text()
@@ -29,7 +36,7 @@ for start in pages:
         # clean html content
         discurso = d('.item-page').html()
 
-        fecha = dateparser.parse(d('dd.published').text(), languages=['es'])
+        fecha = dateparser.parse(fecha, languages=['es'])
         filename = "{did:0=4d}.{fecha}.{titulo}.md".format(did=did, fecha=fecha.strftime('%d-%m-%Y'), titulo=slugify(titulo))
 
         print('Descargando {}...'.format(filename))

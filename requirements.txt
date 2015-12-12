@@ -1,0 +1,5 @@
+pypandoc
+pyquery
+dateparser
+slugify
+requests

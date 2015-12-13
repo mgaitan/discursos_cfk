@@ -12,6 +12,14 @@ pip install -r requirements.py
 python scrapper.py
 ```
 
+luego agrupé desde ipython
+
+```
+In [1]: for a in range(2007, 2016):
+   ...:     !mkdir {a}
+   ...:     !git mv *{a}*.md {a}
+```
+
 
 ### atención
 

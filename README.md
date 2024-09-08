@@ -1,8 +1,10 @@
 # Discursos de Cristina Fernandez de Kirchner
 
-Todos los discursos de CFK como Presidenta de la Nación desde el 10 de diciembre de 2007, en formato de texto (markdown)
+Todos los discursos de Cristina Fernandez de Kirchner como Presidenta de la Nación desde el 10 de diciembre de 2007, en formato de texto (markdown)
 
-Scrappeados el sábado 12 de diciembre desde http://www.casarosada.gob.ar/informacion/discursos/
+
+- Hasta el discurso del 10-12-2015 fueron obtenidos via `screapper.py` desde http://www.casarosada.gob.ar/informacion/discursos/
+- Los posteriores fueron obtenidos desde el sitio oficial de CFK https://www.cfkargentina.com/ via `scrapper_cfkargentina.py`
 
 
 ## ¿cómo ejecutar el scrapper?

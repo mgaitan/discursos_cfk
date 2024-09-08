@@ -1,5 +1,5 @@
 pypandoc
 pyquery
 dateparser
-slugify
+python-slugify
 requests
